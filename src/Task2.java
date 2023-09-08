@@ -20,21 +20,22 @@ public class Task2 {
  и расчёт должен быть произведён в любом случае.
      */
     public static void main(String[] args) {
-        double result = calculateHourlyConsumption(150, 2000);
+        double result = calculateHourlyConsumption(150, 2000,0.15);
         System.out.println("Для холодильника 150 Вт и кондиционера 2000 Вт, стоимость 1 кВт·ч - " + result + " евро");
-        result = calculateHourlyConsumption(200, 1800);
+        result = calculateHourlyConsumption(200, 1800,0.2);
         System.out.println("Для холодильника 200 Вт и кондиционера 1800 Вт, стоимость 1 кВт·ч - " + result + " евро");
-        result = calculateMonthlyCost(150, 2000);
+        result = calculateMonthlyCost(150, 2000,0.15,24,30);
         System.out.println("Стоимость электроэнергии в месяц для холодильника 150 Вт и кондиционера 2000 Вт - " + result + " евро");
-        result = calculateMonthlyCost(200, 1800);
+        result = calculateMonthlyCost(200, 1800,0.2,24,15);
         System.out.println("Стоимость электроэнергии в месяц для холодильника 200 Вт и кондиционера 1800 Вт - " + result + " евро");
     }
 
-    public static double calculateHourlyConsumption(double a, double b) {
-        return (a + b) / 1000 * 0.15;
+    public static double calculateHourlyConsumption(double pow1, double pow2,double cost) {
+        return (pow1+pow2) / 1000 * cost;
     }
 
-    public static double calculateMonthlyCost(double a, double b) {
-        return (a + b) / 1000 * 0.15 * 24 * 31;
+    public static double calculateMonthlyCost(double pow1, double pow2,double cost, double hours, double days ) {
+        double res = calculateHourlyConsumption(pow1, pow2,cost);
+        return res*hours*days;
     }
 }
