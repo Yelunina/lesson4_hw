@@ -11,9 +11,9 @@ public class Task5 {
      */
     public static void main(String[] args) {
         double result = calculateCaloriesBurnt(20, 8);
-        System.out.println(result);
+        System.out.println("Количество сожженных калорий за 20 минут при сжигании 8 калорий в минуту - "+result);
         result = calculateCaloriesBurnt(30, 10);
-        System.out.println(result);
+        System.out.println("Количество сожженных калорий за 30 минут при сжигании 10 калорий в минуту - "+result);
     }
 
     public static double calculateCaloriesBurnt(double minutes, double caloriePerMinuteBurnt) {
