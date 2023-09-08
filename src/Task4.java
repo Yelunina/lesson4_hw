@@ -9,4 +9,14 @@ public class Task4 {
 Стоимость 15 минут разговора при стоимости 20 центов за минуту.
 Стоимость 30 минут разговора при стоимости 15 центов за минуту.
      */
+    public static void main(String[] args) {
+        double result = calculateCallCost(15, 20);
+        System.out.println("Стоимость 15 минут разговора при стоимости 20 центов за минуту - " + result + " евро");
+        result = calculateCallCost(30, 15);
+        System.out.println("Стоимость 30 минут разговора при стоимости 15 центов за минуту - " + result + " евро");
+    }
+
+    public static double calculateCallCost(double minutes, double cents) {
+        return minutes * cents / 100;
+    }
 }
