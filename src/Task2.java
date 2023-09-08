@@ -20,9 +20,9 @@ public class Task2 {
  и расчёт должен быть произведён в любом случае.
      */
     public static void main(String[] args) {
-        double result = calculateHourlyCost(150, 2000);
+        double result = calculateHourlyConsumption(150, 2000);
         System.out.println("Для холодильника 150 Вт и кондиционера 2000 Вт, стоимость 1 кВт·ч - " + result + " евро");
-        result = calculateHourlyCost(200, 1800);
+        result = calculateHourlyConsumption(200, 1800);
         System.out.println("Для холодильника 200 Вт и кондиционера 1800 Вт, стоимость 1 кВт·ч - " + result + " евро");
         result = calculateMonthlyCost(150, 2000);
         System.out.println("Стоимость электроэнергии в месяц для холодильника 150 Вт и кондиционера 2000 Вт - " + result + " евро");
@@ -30,7 +30,7 @@ public class Task2 {
         System.out.println("Стоимость электроэнергии в месяц для холодильника 200 Вт и кондиционера 1800 Вт - " + result + " евро");
     }
 
-    public static double calculateHourlyCost(double a, double b) {
+    public static double calculateHourlyConsumption(double a, double b) {
         return (a + b) / 1000 * 0.15;
     }
 
