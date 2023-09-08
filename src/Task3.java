@@ -10,10 +10,10 @@ public class Task3 {
 Расход топлива для 300 км при расходе 10 л/100 км.
      */
     public static void main(String[] args) {
-        double result = calculateFuelConsumption(8, 100, 150);
-        System.out.println(result);
-        result = calculateFuelConsumption(10, 100, 300);
-        System.out.println(result);
+        double result = calculateFuelConsumption(8, 100, 107);
+        System.out.println("Для поездки на 107 км при расходе 8 л/100 км потребуется " + result + " литров топлива");
+        result = calculateFuelConsumption(10, 100, 303);
+        System.out.println("Для поездки на 303 км при расходе 10 л/100 км потребуется " + result + " литров топлива");
     }
 
     public static double calculateFuelConsumption(double l, double km, double n) {
