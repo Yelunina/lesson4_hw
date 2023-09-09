@@ -40,8 +40,10 @@ double applyTax(double income)
         System.out.println("Чтобы получить x прибыли, Васе необходимо продать " + result + " монет");
         result = priceForXProfit(12350, 0.27, 2000);
         System.out.println("Чтобы получить x прибыли, текущая стоимость монеты должна быть " + result + " евро");
-        result = coinsForXAmount(16.38,2000);
-        System.out.println("Чтобы получить x сумму, по текущему курсу нужно "+result+ " монет");
+        result = coinsForXAmount(16.38, 2000);
+        System.out.println("Чтобы получить x сумму, по текущему курсу нужно " + result + " монет");
+        result = applyTax(2000);
+        System.out.println("Доход, за вычетом налога 23%, составит " + result + " евро");
     }
 
     public static double calculateTotalValue(double initialNumberOfCoins, double currentPriceOfCoins) {
@@ -60,12 +62,13 @@ double applyTax(double income)
     public static double priceForXProfit(double initialNumberOfCoins, double initialPriceOfCoins, double desiredProfit) {
         return desiredProfit / initialNumberOfCoins + initialPriceOfCoins;
     }
-    public static double coinsForXAmount(double currentPriceOfCoins, double desiredAmount){
-        return desiredAmount/currentPriceOfCoins;
+
+    public static double coinsForXAmount(double currentPriceOfCoins, double desiredAmount) {
+        return desiredAmount / currentPriceOfCoins;
     }
-    public static double applyTax(double tax){
-        tax = 1.23;
-        return tax;
+
+    public static double applyTax(double income) {
+        return income / 1.23;
     }
 
 }
